@@ -1,0 +1,62 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main()
+{
+  int angka1,angka2,pilihan;
+  char ulang;
+  float hasil;
+  string operasi;
+  do
+  {
+    cout << "       ##  Pilih menu  ##"      << endl;
+    cout << "==============================" << endl;
+    cout << "1. Penjumlahan" << endl;
+    cout << "2. Pengurangan" << endl;
+    cout << "3. Perkalian " << endl;
+    cout << "4. Pembagian" << endl;
+    cout << endl;
+ 
+    cout << "Pilihan anda: ";
+    cin >> pilihan;
+    cout<< "Masukkan angka 1 = ";
+    cin>> angka1;
+    cout<< "Masukkan angka 2 = ";
+    cin>> angka2;
+ 
+    switch(pilihan){
+    case 1:
+        hasil=angka1+angka2;
+        operasi='+';
+        break;
+  	case 2:
+  		hasil=angka1-angka2;
+  		operasi='-';
+  		break;
+  	case 3:
+	  hasil=angka1*angka2;
+	  operasi='*';
+	  break;
+	case 4:
+	  hasil=angka1/angka2;
+	  operasi='/';
+	  break;	  	
+    default:
+        cout << "Menu tidak tersedia" << endl;
+    }
+    cout << endl;
+    cout<<"============================="<<endl;
+    cout<<"         "<<angka1<<operasi<<angka2<<"="<<hasil<<endl;
+    cout<<"============================="<<endl;
+    cout << "Ingin memilih menu lain (y/t)? ";
+    cin >> ulang;
+    cout << endl;	
+}
+  while (ulang!= 't');
+ 
+  cout << "Terimakasih...";
+ 
+  cout << endl;
+  return 0;
+}
